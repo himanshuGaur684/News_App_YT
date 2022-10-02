@@ -67,6 +67,7 @@ class SearchArticleActivity : AppCompatActivity() {
             rvArticle.adapter = newsAdapter
 
             ivTimer.setOnClickListener {
+
                 val datePickerRange = MaterialDatePicker.Builder.dateRangePicker().build()
                 datePickerRange.show(
                     this@SearchArticleActivity.supportFragmentManager,
@@ -75,6 +76,8 @@ class SearchArticleActivity : AppCompatActivity() {
                 datePickerRange.addOnPositiveButtonClickListener {
                     datePickerRange.selection?.let {
                         val map = mutableMapOf<String, String>()
+                        Log.d("TAG", "initViews first: ${it.first}")
+                        Log.d("TAG", "initViews second: ${it.second}")
                         map[Constants.START_DATE] = changeDateFormat(it.first)
                         map[Constants.END_DATE] = changeDateFormat(it.second)
                         map[Constants.QUERY] = binding.edSearch.text.toString()
@@ -96,7 +99,7 @@ class SearchArticleActivity : AppCompatActivity() {
 
     fun changeDateFormat(long: Long?): String {
         long?.let {
-            val simpleDateFormat = SimpleDateFormat("yyyy-mm-dd")
+            val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
             return simpleDateFormat.format(long)
         }
         return ""
