@@ -13,6 +13,7 @@ class SearchNewsUseCase @Inject constructor(private val searchRepository: Search
 
     operator fun invoke(map: MutableMap<String, String>): Flow<Resource<List<SearchArticle>>> =
         flow {
+            emit(Resource.Loading())
             emit(searchRepository.getSearchResults(map))
         }.flowOn(Dispatchers.IO)
 
