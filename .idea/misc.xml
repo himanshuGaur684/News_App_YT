@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/NewsApp2/app/src/main/res/layout/activity_main.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/NewsApp2/news/news_presentation/src/main/res/layout/activity_news.xml" value="0.2375" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/NewsApp2/news/news_presentation/src/main/res/layout/view_holder_news_article.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/NewsApp2/news_details/details_presentation/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1225" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/NewsApp2/news_details/details_presentation/src/main/res/layout/activity_search_article.xml" value="0.18425925925925926" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/NewsApp2/news_details/details_presentation/src/main/res/layout/view_holder_search_news_article.xml" value="0.2526041666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
