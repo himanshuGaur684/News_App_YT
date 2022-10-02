@@ -62,5 +62,7 @@ dependencies {
     kapt DaggerHilt.hiltAndroidCompiler
     kapt DaggerHilt.hiltCompiler
 
+    implementation(LottieAnimations.lottieAnimations)
+
 }
 

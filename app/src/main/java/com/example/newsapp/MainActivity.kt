@@ -1,11 +1,13 @@
 package com.example.newsapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.app.utils.navigation.Activities
 import com.example.newsapp.databinding.ActivityMainBinding
-import com.example.newsapp.navigation.DefaultNavigatorProvider
 import com.universal.utils.navigation.Navigator
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -22,13 +24,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
+        window.statusBarColor  = ContextCompat.getColor(this,R.color.white)
+        _binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         setContentView(binding.root)
 
-        Thread.sleep(2500)
-
-        provider.getActivity(Activities.NewsActivity).navigate(this)
-
+        Handler(Looper.myLooper()!!).postDelayed({
+            provider.getActivity(Activities.NewsActivity).navigate(this)
+            finish()
+        }, 2700)
 
     }
 }
